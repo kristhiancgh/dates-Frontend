@@ -1,0 +1,23 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Log in</mat-card-title>
+        </mat-card-header>
+        <form class="example-form" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <mat-label class="label-wrapper">Username</mat-label>
+                    <input matInput required name="userName" placeholder="userName" formControlName="userName">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput required type="password" name="password" placeholder="password"
+                        formControlName="password">
+                </mat-form-field>
+            </mat-card-content>
+            <div class="messages-error"><a class="error" *ngIf="haveError">* Las credenciales no son correctas. (Para este ejemplo los dos campos tienen que ser iguales)</a>
+            </div>
+            <button mat-stroked-button color="accent" class="btn-block" type="submit" value="submit">Ingresar</button>
+        </form>
+    </mat-card>
+</div>

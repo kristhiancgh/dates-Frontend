@@ -3,6 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  endpointGetAllTurns: 'http://localhost:8080/turns/getInfo',
+  endpointGetAllStores: 'http://localhost:8080/stores/getAll',
+  endpointGetServicesByStore: 'http://localhost:8080/services/getServicesByStore/',
+  endpointSaveTurn: 'http://localhost:8080/turns/saveTurn',
   production: false
 };
 
